@@ -26,4 +26,4 @@ Vous pouvez vous servir des mixins des différents composants fournis avec la ve
  ## Personnalisation
  Vous pouvez personnaliser la définition des classes générées par défaut dans le framework en deux étapes
  - Modifier les valeurs des différentes variables dans le fichier `scss/vars`
- - Regénérer le fichier css principal avec la commande `$ sass scss/win.scss:../css/win.css`
+ - Regénérer le fichier css principal avec la commande `$ sass scss/build.scss:css/win.css`
