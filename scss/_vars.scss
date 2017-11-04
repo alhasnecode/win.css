@@ -1,0 +1,54 @@
+/*
+** Variables définissant les valeurs par défaut de certains attributs
+** pour personnaliser le framework
+*/
+
+/*********************** Typographie ***********************/
+
+//Police par défaut
+
+$default_font_family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$default_headlines_font_family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+
+/************************ Bouttons ************************/
+
+//Structure des boutton
+
+$default_btn_padding: 5px;
+$default_btn_margin: 0;
+$default_btn_display: inline-block;
+$default_btn_width: null;
+$default_btn_height: null;
+$default_btn_border_radius: null;
+
+//Style de police
+
+$default_btn_f_color: #000;
+$default_btn_f_family: inherit;
+$default_btn_f_size: 1.1em;
+$default_btn_f_weight: normal;
+
+//Style des bouttons
+
+$btn_default_bg_color: #FFF;
+$btn_default_border: 1px solid #ddd;
+$btn_default_shadow: null;
+
+
+/*********************** Alertes *************************/
+
+//Structure et style de l'alerte par défaut
+$alert_default_text_align: center;
+$alert_default_font_size: 1.1em;
+$alert_default_color: #FFF;
+$alert_default_padding: 10px;
+$alert_default_border_radius: 0.3em;
+$alert_default_bg_color: #666;
+
+
+/********************** Grille **************************/
+
+$default_total_col_nb: 12;
+$default_container_width: 94%;
+$default_container_padding: 3%;
+$default_margin_between_cols: 2%;

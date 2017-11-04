@@ -1,0 +1,39 @@
+
+
+
+//Structure et style de l'alerte par défaut
+$alert_default_text_align: center !default;
+$alert_default_font_size: 1em !default;
+$alert_default_color: #FFF !default;
+$alert_default_padding: 10px !default;
+$alert_default_border_radius: 0.3em !default;
+$alert_default_bg_color: #666 !default;
+
+
+/*
+** Mixin pour définir la structure et le style par défaut des alerte
+*/
+@mixin alert_structure($text_align: $alert_default_text_align,
+					   $font_size: $alert_default_font_size,
+					   $color: $alert_default_color,
+					   $padding: $alert_default_padding,
+					   $border_radius: $alert_default_border_radius,
+					   $bg_color: $alert_default_bg_color,
+					   ){
+	display: block;
+	color: $color;
+	text-align: $text_align;
+	font-size: $font_size;
+	padding: $padding;
+	border-radius: $border_radius;
+	background-color: $bg_color;
+}
+
+/*
+** Coulours de fond et de police
+*/
+
+@mixin alert_colors($background_color, $font_color: $alert_default_color){
+	color: $font_color;
+	background-color: $background_color;
+}

@@ -1,0 +1,52 @@
+
+
+
+$default_total_col_nb: 12 !default;
+$default_container_width: 94% !default;
+$default_container_padding: 3% !default;
+$default_margin_between_cols: 2% !default;
+
+
+/*
+** Mixins pour définir une grille
+*/
+
+/*
+** Mixin pour définir le conteneur de la grille
+*/
+
+@mixin container(){
+	width: $default_container_width;
+	padding: $default_container_padding;
+}
+
+/*
+** Mixin pour générer les lignes de la grille
+*/
+
+@mixin row(){
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	@media screen and (min-width: 768px){
+		flex-direction: row;
+	}
+}
+
+/*
+** Mixin pour générer les colonnes
+*/
+
+@mixin column($col_nb: 1, $total_col_nb: $default_total_col_nb){
+	flex-basis: calc(((100% - #{$default_margin_between_cols} * (#{$total_col_nb} - 1))/#{$total_col_nb}) * #{$col_nb} + #{$default_margin_between_cols} * (#{$col_nb} - 1));
+}
+
+/*
+** Mixin pour générer les offsets
+*/
+
+@mixin offset($col_nb: 1, $total_col_nb: $default_total_col_nb){
+	flex-basis: 0%;
+	margin-left: calc(((100% - #{$default_margin_between_cols} * (#{$total_col_nb} - 1))/#{$total_col_nb}) * #{$col_nb} + #{$default_margin_between_cols} * (#{$col_nb} - 1));
+}

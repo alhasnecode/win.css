@@ -1,0 +1,160 @@
+
+
+//Polices par défaut
+
+$default_font_family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$default_headlines_font_family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif !default;
+
+
+body{
+	font-family: $default_font_family;
+}
+/*Definition du font-stack/chemin de dégradation pour les éléments H*/
+h1, h2, h3, h4, h5, h6{
+	font-family: $default_headlines_font_family;
+	font-weight: bold;
+}
+/*Définition des tailles de police pour les élements H*/
+h1{
+	font-size: 3em;
+	line-height: 1.5em;
+}
+h2{
+	font-size: 2.5em;
+	line-height: 1.5em;
+}
+h3{
+	font-size: 2em;
+	line-height: 1.4em;
+}
+h4{
+	font-size: 1.5em;
+	line-height: 1.4em;
+}
+h5{
+	font-size: 1.3em;
+	line-height: 1.3em;
+}
+h6{
+	font-size: 1.1em;
+	line-height: 1.3em;
+}
+
+/*Tailles et colours des sous-titres à l'intérieur des titres*/
+
+h1 > small, h2 > small, h3 > small, h4 > small, h5 > small, h6 > small{
+	color:#494545;
+	font-size: 0.6em;
+}
+
+/*Titres réduits en tailles*/
+
+.small-heading{
+	color: #494545;
+}
+
+h1.small-heading{
+	font-size: 1.8em;
+}
+h2.small-heading{
+	font-size: 1.5em;
+}
+h3.small-heading{
+	font-size: 1.2em;
+}
+h4.small-heading{
+	font-size: 0.9em;
+}
+h5.small-heading{
+	font-size: 0.78em
+}
+h6.small-heading{
+	font-size: 0.66em;
+}
+
+/*Style des paragraphes*/
+p{
+	font-family: inherit;
+	text-align: left;
+	font-size: 1.2em;
+	margin-bottom: 15px;
+}
+/*Style des éléments inline*/
+mark, del, ins, u, strong, em, abbr{
+	font: inherit;
+	color: black;
+}
+
+mark{
+	background-color: #7fe081;
+}
+del{
+
+}
+ins{
+	font-weight: bold;
+}
+strong{
+	font-weight: 600;
+}
+em{
+	font-style: oblique;
+}
+abbr{
+	font-weight: bold;
+}
+
+/*Alignements*/
+.align-left{
+	text-align: left;
+}
+.align-center{
+	text-align: center;
+}
+.align-right{
+	text-align: right;
+}
+.align-justify{
+	text-align: justify;
+}
+/*Transformations du textes*/
+.upper-case{
+	text-transform: uppercase;
+}
+.lower-case{
+	text-transform: lowercase;
+}
+.capitalized{
+	text-transform: capitalize;
+}
+
+/*Style des listes*/
+ul.chip-list{
+	list-style-type: disc;
+	padding-left: 17px;
+}
+ul.square-list{
+	list-style-type: square;
+	padding-left: 17px;
+}
+
+/*Style des citations "blockquote"*/
+blockquote{
+	margin: 10px 20px;
+	font-style: oblique;
+}
+blockquote:before{
+	content: open-quote;
+}
+blockquote:after{
+	content: close-quote;
+}
+/*Style du code informatique / saisie de l'utilisateur*/
+code, pre{
+	background-color: #F2F2F2;
+	display: inline-block;
+	padding: 10px;
+}
+kbd{
+	font-style: oblique;
+}

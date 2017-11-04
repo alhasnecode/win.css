@@ -1,0 +1,14 @@
+
+
+/*
+** Mise en page de la liste
+*/
+
+@mixin list_layout($flex_direction, $flex_justify_content: null){
+	max-width: 100%;
+	display: flex;
+	flex-direction: $flex-direction;
+	@if($flex_justify_content){
+		justify-content: $flex_justify_content;
+	}
+}

@@ -1,0 +1,22 @@
+
+/*
+**	Grid classes generation
+*/
+
+.container{
+	@include container();
+	.row{
+		@include row();
+
+		@for $col from 1 to ($default_total_col_nb + 1){
+			.col-#{$col}{
+				@include column($col);
+			}
+
+			.offset-#{$col}{
+				@include offset($col);
+			}
+		}
+
+	}
+}

@@ -1,0 +1,21 @@
+
+
+.alert{
+	@include alert_structure();
+}
+.alert-danger{
+	@extend .alert;
+	@include alert_colors(#DC3C45);
+}
+.alert-success{
+	@extend .alert;
+	@include alert_colors(#2aad16);
+}
+.alert-info{
+	@extend .alert;
+	@include alert_colors(#008CE3);
+}
+.alert-warning{
+	@extend .alert;
+	@include alert_colors(#ffcc00, #555);
+}

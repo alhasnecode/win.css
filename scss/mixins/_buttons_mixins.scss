@@ -1,0 +1,90 @@
+
+
+
+/*
+** Valeurs par défaut
+*/
+//Structure des bouttons
+
+$default_btn_padding: 5px !default;
+$default_btn_margin: 0 !default;
+$default_btn_display: inline-block !default;
+$default_btn_width: null !default;
+$default_btn_height: null !default;
+$default_btn_border_radius: null !default;
+
+//Style de police
+
+$default_btn_f_color: #000 !default;
+$default_btn_f_family: inherit !default;
+$default_btn_f_size: 1.1em !default;
+$default_btn_f_weight: normal !default;
+
+//Style des bouttons
+
+$btn_default_bg_color: #FFF !default;
+$btn_default_border: 1px solid #ddd !default;
+$btn_default_shadow: null !default;
+
+/*
+** Mixin pour définir la structure d'un boutton
+*/
+@mixin btn_structure($padding: $default_btn_padding,
+					 $margin: $default_btn_margin,
+					 $display: $default_btn_display,
+					 $width: $default_btn_width,
+					 $height: $default_btn_height,
+					 $border_radius: $default_btn_border_radius){
+	padding: $padding;
+	margin: $margin;
+	display: $display;
+	@if($width){
+		width: $width;
+	}
+	@if($height){
+		height: $height;
+	};
+	@if($border_radius){
+		border-radius: $border_radius;
+	}
+}
+
+/*
+** Mixin pour définir le style de police d'un boutton
+*/
+
+@mixin btn_font($f_color: $default_btn_f_color,
+				$f_family: $default_btn_f_family,
+				$f_size: $default_btn_f_size,
+				$f_weight: $default_btn_f_weight){
+
+	color: $f_color;
+	font-family: $f_family;
+	font-size: $f_size;
+	font-weight: $f_weight;
+}
+
+/*
+** Mixin pour définir l'apparence d'un boutton
+*/
+
+@mixin btn_style($bg_color: $btn_default_bg_color,
+				 $border: $btn_default_border,
+				 $shadow: $btn_default_shadow){
+
+	background-color: $bg_color;
+	border: $border;
+	@if($shadow){
+		-webkit-box-shadow: $shadow;
+		-moz-box-shadow: $shadow;
+		box-shadow: $shadow;
+	};
+}
+
+/*
+** Mixin pour ajouter des dégradation de coulour
+*/
+
+@mixin btn_gradient($gradient_direction, $gradient_colors...){
+	background-image: linear-gradient($gradient_direction, $gradient_colors);
+}

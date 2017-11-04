@@ -1,0 +1,143 @@
+/*
+** Les bouttons en scss
+*/
+
+//@import 'buttons_mixins';
+
+//Boutton contexte d'information
+$info_btn_bg: #6d97f2 !default;
+$info_btn_color: #fff !default;
+$info_btn_border: 1px solid #6d97f2 !default;
+//Boutton contexte réussite
+$ok_button_bg: #2aad16 !default;
+$ok_button_color: #fff !default;
+$ok_button_border: 1px solid #3b842f !default;
+//Boutton contexte erreur
+$error_button_bg: #ea4b4b !default;
+$error_button_color: #fff !default;
+$error_button_border: 1px solid #d33030 !default;
+//Boutton small & large
+$sm_btn_fsize: 0.9em !default;
+$lg_btn_fsize: 1.3em !default;
+$x_lg_btn_width: 100% !default;
+
+
+.btn{
+	@include btn_structure(10px, 0, inline-block, null, null, 5px);
+	@include btn_font();
+	@include btn_style();
+	text-decoration: none;
+	cursor: pointer;
+	&:active, &:focus{
+		outline: none;
+		border-color: #aaa;
+	};
+	&:hover{
+		background-color: #eee;
+	};
+}
+.sm{
+	@extend .btn;
+	font-size: $sm_btn_fsize;
+	padding: 5px;
+	border-radius: 3px;
+}
+.lg{
+	@extend .btn;
+	font-size: $lg_btn_fsize;
+	padding: 15px;
+	border-radius: 8px;
+}
+.x-lg{
+	@extend .btn;
+	display: block;
+	width: $x_lg_btn_width;
+}
+.btn-info{
+	@extend .btn;
+	background-color: $info_btn_bg;
+	color: $info_btn_color;
+	border: $info_btn_border;
+	&:hover{
+		background-color: #317ee2;
+	};
+	&:active, &:focus{
+		border-color: #021f6b;
+	};
+}
+.btn-ok{
+	@extend .btn;
+	background-color: $ok_button_bg;
+	color: $ok_button_color;
+	border: $ok_button_border;
+	&:active, &:focus{
+		background-color: $ok_button_bg;
+		color: $ok_button_color;
+		border: $ok_button_border;
+	};
+	&:hover{
+		background-color: #27a014;
+	};
+}
+.btn-error{
+	@extend .btn;
+	background-color: $error_button_bg;
+	color: $error_button_color;
+	border: $error_button_border;
+	&:hover{
+		background-color: #e84040;
+	};
+	&:focus, &:active{
+		background-color: #e22f2f;
+		border-color: #a02020;
+	}
+}
+.flat{
+	@extend .btn;
+	border:none;
+	border-radius: unset;
+}
+.flat{
+	@extend .btn;
+	color: #fff;
+	transition: box-shadow 0.2s ease-in-out;
+}
+.fancy{
+	@extend .btn;
+	color: #fff;
+	transition: box-shadow 0.2s ease-in-out;
+	&:hover{
+		@include btn_style(unset, unset, 0px 0px 10px -2px rgba(0,0,0,0.75));
+	}
+}
+.fancy-yellow{
+	@extend .fancy;
+	color: #555;
+	background: #fceabb; /* Old browsers */
+	@include btn_gradient(to bottom, #fceabb 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%);
+	&:hover{
+		@include btn_gradient(to bottom, #f9c667 0%,#f79621 65%,#f79621 100%);
+	}
+}
+.fancy-green{
+	@extend .fancy;
+	background: #a4b357; /* Old browsers */
+	@include btn_gradient(to bottom, #a4b357 0%,#75890c 100%);
+	&:hover{
+		@include btn_gradient(to bottom, #73880a 0%,#73880a 100%);
+	};
+	&:focus, &:active{
+		@include btn_gradient(to bottom, #627d4d 0%,#1f3b08 100%);
+	}
+}
+.fancy-blue{
+	@extend .fancy;
+	background: #b2e1ff; /* Anciens navigateurs */
+	@include btn_gradient(to bottom, #b2e1ff 0%,#66b6fc 66%);
+	&:hover{
+		@include btn_gradient(to bottom, #63b6db 32%,#63b6db 44%,#309dcf 100%);
+	};
+	&:focus, &:active{
+		@include btn_gradient(to bottom, #a7cfdf 0%,#23538a 100%);
+	}
+}
